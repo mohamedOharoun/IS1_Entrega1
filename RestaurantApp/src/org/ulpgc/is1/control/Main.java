@@ -5,7 +5,7 @@ import java.util.Arrays;
 
 public class Main {
 
-    public static OrderManager init(OrderManager orderManager) {
+    public static void init(OrderManager orderManager) {
         orderManager.addCustomer("Ian", "Trujillo", "street",42, 34012,
                 "Las Palmas");
         orderManager.addCustomer("Mohamed", "O. Haroun", "street2", 43,24012, "Las palmas");
@@ -16,8 +16,6 @@ public class Main {
         orderManager.addDish("dish1", "ingredient1,ingredient2", 10);
         orderManager.addDish("dish2", "ingredient2,ingredient3", 20);
         orderManager.addDish("dish3", "ingredient3,ingredient4", 30);
-
-        return orderManager;
     }
 
     public static void main(String[] args) {
