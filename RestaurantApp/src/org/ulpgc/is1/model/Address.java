@@ -44,4 +44,9 @@ public class Address {
     public void setCity(String city) {
         this.city = city;
     }
+
+    @Override
+    public String toString() {
+        return String.format("%s, c/ %s, %d. Código Postal: %d", city, street, number, postalCode);
+    }
 }

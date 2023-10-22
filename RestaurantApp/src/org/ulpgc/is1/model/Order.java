@@ -57,4 +57,22 @@ public class Order {
         }
         return price;
     }
+
+    @Override
+    public String toString() {
+        StringBuilder message = new StringBuilder();
+        message.append("Pedido en ");
+        message.append(restaurant.getName());
+        message.append("\nPlato\t\tPrecio\tCantidad\n");
+        for(OrderItem orderItem : orderItems) {
+            message.append(orderItem.getDish().getName());
+            message.append("\t\t");
+            message.append(orderItem.getDish().getPrice());
+            message.append("\t\t");
+            message.append(orderItem.getQuantity());
+            message.append("\n");
+        }
+        message.append("Total: " + price());
+        return message.toString();
+    }
 }

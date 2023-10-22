@@ -12,14 +12,12 @@ public class Customer {
     private final List<Order> order;
     private Address address;
 
-
     public Customer(String name, String surname, String street, int number, int postalCode, String city) {
         this.name = name;
         this.surname = surname;
         this.address = new Address(street, number, postalCode, city);
         this.order = new ArrayList<Order>();
     }
-
 
     public String getName() {
         return name;
@@ -64,5 +62,10 @@ public class Customer {
     @Override
     public int hashCode() {
         return Objects.hash(name, surname);
+    }
+
+    @Override
+    public String toString() {
+        return String.format("%s %s, Dirección: %s", name, surname, address);
     }
 }
