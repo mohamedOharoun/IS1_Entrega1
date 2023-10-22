@@ -29,7 +29,7 @@ public class OrderManager {
         return dishes.size();
     }
 
-    public int getNumberCustomer() {
+    public int getNumberCustomers() {
         return customers.size();
     }
     public void addDish(String name, String description, int price) {
